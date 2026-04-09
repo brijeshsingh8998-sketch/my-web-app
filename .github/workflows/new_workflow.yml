@@ -1,0 +1,23 @@
+name: My First Pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Show current directory
+        run: pwd
+
+      - name: List files
+        run: ls
+
+      - name: Print success message
+        run: echo "Pipeline is running successfully"
